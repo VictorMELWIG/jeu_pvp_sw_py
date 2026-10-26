@@ -23,8 +23,8 @@
 
 #models et utils
 #les classes des heros et des mechants avec nom attaque pv etc - fait + test ok
-#aller chercher les heros 
-#tirer un mechant au hasard 
+#aller chercher les heros - fait + test ok
+#tirer un mechant au hasard - fait + test ok
 #save le score avec pseudo vague 
 #afficher le top3
 #afficher le menu la liste des heros et les 3 heros choisis

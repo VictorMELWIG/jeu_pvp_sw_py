@@ -1,5 +1,5 @@
-#
 from models import Hero, Mechant
+from utils import lire_heros, tirer_mechant
 
 #test l'affichage au bon format
 def test_affichage():
@@ -28,9 +28,21 @@ def test_pv_jamais_negatifs():
     assert maul.pv == 0
     assert not maul.est_vivant()
 
+#test que les 10 heros sont bien lus depuis la bdd
+def test_lire_heros():
+    heros = lire_heros()
+    assert len(heros) == 10
+
+#test qu'on tire bien un mechant vivant
+def test_tirer_mechant():
+    mechant = tirer_mechant()
+    assert mechant.est_vivant()
+
 if __name__ == "__main__":
     test_affichage()
     test_attaquer_retire_des_pv()
     test_degats_minimum_1()
     test_pv_jamais_negatifs()
+    test_lire_heros()
+    test_tirer_mechant()
     print("tout est bon")
