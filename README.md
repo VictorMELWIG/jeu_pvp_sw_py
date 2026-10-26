@@ -1,5 +1,5 @@
 #db
-#si pas fait avant : charger la bdd du db_init.py
+#si pas fait avant : charger la bdd du db_init.py - fait avec le script de disocrd
 
 #main
 #affichier le menu avec : demarrer le jeu le classement quitter
@@ -22,7 +22,7 @@
 #renvoie le nombre de vague
 
 #models et utils
-#les classes des heros et des mechants avec nom attaque pv etc
+#les classes des heros et des mechants avec nom attaque pv etc - fait + test ok
 #aller chercher les heros 
 #tirer un mechant au hasard 
 #save le score avec pseudo vague 
