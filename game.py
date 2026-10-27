@@ -8,3 +8,6 @@
 #       le mechnat attaque un hero en vie 
 #   si le mechant meurt le compteur de vague passe a +1
 #renvoie le nombre de vague
+
+#aide prof
+#

@@ -1,8 +1,8 @@
 #on se co a la bdd
 #aller chercher les heros - fait + test ok
 #tirer un mechant au hasard - fait + test ok
-#save le score avec pseudo vague dans la bdd
-#afficher le top3
+#save le score avec pseudo vague dans la bdd - fait + test ok
+#afficher le top3 - fait mais a test et voir 
 from pymongo import MongoClient
 from models import Hero, Mechant
 import random
@@ -22,4 +22,7 @@ def tirer_mechant():
     return Mechant(doc["name"], doc["attack"], doc["defense"], doc["hp"])
 
 def sauver_score(pseudo, vagues):
-    db.scores.insert_one
+    db.scores.insert_one({"player_name" : pseudo, "waves" : vagues})
+
+def lire_top3():
+    return list(db.scores.find().sort("waves"))
