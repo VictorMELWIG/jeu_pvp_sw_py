@@ -1,3 +1,5 @@
+#db
+#si pas fait avant : charger la bdd du db_init.py - fait avec le script de disocrd
 from pymongo import MongoClient
 client = MongoClient('mongodb://localhost:27017/')
 db = client.jeu_pvp_sw_py

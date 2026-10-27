@@ -1,3 +1,9 @@
+#personnage pour modele de hero et mechant
+#   est_vivant est vrai tan qu'il reste des pv
+#   attaquer degats=atk-defense de la cible de l'attaque
+#   on retire le nombre de pv apres attaque
+#   affiche le resultat
+#hero et mechant heritent de personnage
 class Personnage:
     def __init__(self, nom, atk, defense, pv):
         self.nom = nom
