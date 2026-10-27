@@ -1,8 +1,17 @@
 #on se co a la bdd
-#aller chercher les heros - fait + test ok
-#tirer un mechant au hasard - fait + test ok
-#save le score avec pseudo vague dans la bdd - fait + test ok
-#afficher le top3 - fait mais a test et voir 
+#aller chercher les heros avec find sur cote_lunimeux- fait + test ok
+#tirer un mechant au hasard sur cote_obscur- fait + test ok
+#save le score avec pseudo vague dans la bdd avec un insert_one dans scores - fait + test ok
+#voir le top3 avec find et un tri sur waves 
+#afficher le menu MENU boucle sur chaque option>num+texte
+#choix (option, erreur)
+#   tant que c'est vrai on a la saisit du joueur
+#   dans option on return
+#   sinon def erreur
+#erreur affiche choix invalide
+#numero+hero pour valider la selection
+#afficher les heros choisit par le joueur 
+#afficher le top3 qu'on a recup au dessus
 from pymongo import MongoClient
 from models import Hero, Mechant
 import random

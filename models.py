@@ -1,6 +1,6 @@
 #personnage pour modele de hero et mechant
 #   est_vivant est vrai tan qu'il reste des pv
-#   attaquer degats=atk-defense de la cible de l'attaque
+#   attaquer degats=atk-defense de la cible de l'attaque avec un minimum de 1 et les pv de la cible jamais sous 0
 #   on retire le nombre de pv apres attaque
 #   affiche le resultat
 #hero et mechant heritent de personnage
