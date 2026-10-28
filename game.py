@@ -10,3 +10,11 @@
 #   tant que les heros sont en vie on tire un mechnat et frappe
 #   +1 sur vague si le mehcnat sort 
 #   return vague
+import random
+from utils import tirer_mechant
+
+def heros_en_vie(equipe):
+    vivant = []
+    for hero in equipe:
+        if hero_est_vivant():
+            vivant.append(heros)
