@@ -29,38 +29,39 @@ import sys
 from game import lancer_partie
 from utils import afficher_menu, afficher_heros, afficher_equipe, afficher_scores
 from utils import choix, erreur, lire_heros, pseudo_valide, sauver_score
-MENU = ["Lance le jeu", "afficher les scores", "quitter"]
+
+MENU = ["lancer jeu", "afficher les scores", "quitter"]
 
 def demander_pseudo():
     while True:
-        pseudo = input("ton pseudo: ").string()
+        pseudo = input("ton pseudo:").strip()
         if pseudo_valide(pseudo):
             return pseudo
-        print("psuedo invalide, avce que des lettres entre 3 et 18 stp")
+        print("pseudo deja pris")
 
 def choisir_equipe():
     heros = lire_heros()
-    numero = []
+    numeros = []
     for i in range(1, len(heros) + 1):
-        numero.append(str(i))
+        numeros.append(str(i))
     equipe = []
     while len(equipe) < 3:
         afficher_equipe(equipe)
-        afficher_heros
-        numero = int (choix(numero, erreur))
+        afficher_heros(heros)
+        numero = int(choix(numeros, erreur))
         perso = heros[numero - 1]
-        if perso in equipe :
-            print("ce hero est deja dans l'equipe")
+        if perso in equipe:
+            print("Ce héros est déjà dans ton équipe")
         else:
             equipe.append(perso)
-        return equipe
+    return equipe
 
 def jouer():
     pseudo = demander_pseudo()
     equipe = choisir_equipe()
-    vagues = lancer_partie
+    vagues = lancer_partie(equipe)
     sauver_score(pseudo, vagues)
-    print(f"\n{pseudo} a fait {vagues} vagues")
+    print(f"\n{pseudo} a survécu à {vagues} vagues")
     afficher_scores()
 
 def process(reponse):
@@ -71,7 +72,7 @@ def process(reponse):
     elif reponse == "3":
         sys.exit()
 
-if __name__=="__main__":
+if __name__ == "__main__":
     while True:
         afficher_menu(MENU)
         process(choix(["1", "2", "3"], erreur))
